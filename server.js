@@ -1,4 +1,5 @@
 
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
@@ -29,9 +30,36 @@ if (!process.env.GEMINI_API_KEY) {
 }
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-const model = genAI.getGenerativeModel({ model: 'gemini-3.6-flash' });
+const MODELS = ['gemini-3.6-flash', 'gemini-2.5-flash'];
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+function isTransient(err) {
+  const m = String((err && err.message) || '').toLowerCase();
+  return m.includes('503') || m.includes('429') ||
+         m.includes('overloaded') || m.includes('high demand') ||
+         m.includes('unavailable');
+}
+
+async function generateReply(prompt) {
+  let lastErr;
+  for (const name of MODELS) {
+    const model = genAI.getGenerativeModel({ model: name });
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const result = await model.generateContent(prompt);
+        return result.response.text().trim();
+      } catch (err) {
+        lastErr = err;
+        if (!isTransient(err)) break;
+        await sleep(400 * (attempt + 1));
+      }
+    }
+  }
+  throw lastErr;
+}
+
+// ---- System prompt: the guardrails that keep answers grounded ----
 function buildPrompt(userMessage) {
   return `You are a friendly, concise assistant on Shaveen Fernando's portfolio website.
 Your ONLY job is to answer visitors' questions about Shaveen using the information below.
@@ -63,11 +91,15 @@ app.post('/api/chat', async (req, res) => {
   }
 
   try {
-    const result = await model.generateContent(buildPrompt(userMessage));
-    const reply = result.response.text().trim();
+    const reply = await generateReply(buildPrompt(userMessage));
     res.json({ reply });
   } catch (err) {
     console.error('Gemini error:', err.message);
+    if (isTransient(err)) {
+      return res.status(503).json({
+        reply: "I'm a bit busy right now — please try again in a few seconds.",
+      });
+    }
     res.status(500).json({ error: 'Failed to generate a response.' });
   }
 });
