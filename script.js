@@ -1,12 +1,7 @@
-// ============================================================
-//  Portfolio interactions: scroll-reveal, active nav, FAQ, chat
-// ============================================================
 
-// ---- Point this at your backend. Localhost for dev; swap for your
-//      deployed URL (e.g. https://your-app.onrender.com/api/chat) once live.
-const CHAT_API_URL = 'http://localhost:5001/api/chat';
+const CHAT_API_URL = '/api/chat';
 
-// ---- Scroll-reveal ----------------------------------------------------
+
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
     if (e.isIntersecting) {
@@ -17,7 +12,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
 
-// ---- Active nav link on scroll ---------------------------------------
+
 const sections = ['about', 'projects', 'faq', 'contact']
   .map((id) => document.getElementById(id))
   .filter(Boolean);
@@ -35,7 +30,7 @@ const navObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-45% 0px -50% 0px' });
 sections.forEach((s) => navObserver.observe(s));
 
-// ---- FAQ accordion ----------------------------------------------------
+
 document.querySelectorAll('.faq-item').forEach((item) => {
   item.querySelector('.faq-q').addEventListener('click', () => {
     const isOpen = item.classList.contains('open');
@@ -44,7 +39,7 @@ document.querySelectorAll('.faq-item').forEach((item) => {
   });
 });
 
-// ---- Chat widget ------------------------------------------------------
+
 const chatToggle = document.getElementById('chat-toggle');
 const chatPanel = document.getElementById('chat-panel');
 const chatClose = document.getElementById('chat-close');
