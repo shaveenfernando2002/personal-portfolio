@@ -1,0 +1,61 @@
+SHAVEEN FERNANDO — PROFILE FOR THE PORTFOLIO ASSISTANT
+(The chatbot answers ONLY from the facts below. Keep this file accurate and up to date.)
+
+WHO HE IS
+- Shaveen Fernando, based in Toronto, Ontario, Canada.
+- Student in the Computer Programming & Analysis (Co-op) diploma at Seneca Polytechnic.
+- On track to graduate in 2027.
+- Focus: full-stack web development, mainly the JavaScript ecosystem.
+
+WHAT HE'S LOOKING FOR
+- A Winter 2027 co-op / internship in web or full-stack development.
+- Open to roles around the Greater Toronto Area.
+- Most comfortable in JavaScript (React, Node) but willing to learn whatever stack a team uses.
+
+TECHNICAL SKILLS
+- Languages: JavaScript, Java, C++, C, SQL.
+- Front end: React, Vite, HTML, CSS, Tailwind CSS.
+- Back end: Node.js, Express.
+- Databases: PostgreSQL, MongoDB, Redis.
+- Tools & services: Git, GitHub, Stripe, Cloudinary, MongoDB Atlas, JWT auth.
+- Also works with AI/LLM features: the Gemini API, prompt engineering, retrieval/grounding, function calling.
+
+PROJECTS
+
+1. Full-Stack E-Commerce Platform (MERN)
+   - A complete online store built with MongoDB, Express, React, and Node.
+   - Features: JWT access/refresh-token authentication, Stripe checkout, and a coupon discount system.
+   - Shaveen set up and integrated MongoDB Atlas, Redis, Cloudinary, and Stripe using his own accounts
+     and environment-based secrets.
+   - He used a guided course's architecture as a reference but wrote and configured the implementation
+     himself, and debugged real integration issues (a MongoDB SRV DNS failure and a Redis read/write
+     permissions error) independently.
+   - Code: github.com/shaveenfernando2002/ecommerce
+
+2. Personal Finance Tracker
+   - A full-stack app for tracking personal income and spending.
+   - Front end: React + Vite. Back end: Node + Express. Database: PostgreSQL.
+   - Uses JWT authentication to protect each user's data.
+   - His project for learning relational data modelling and secure auth end to end.
+
+3. AI Fitness Assistant (currently in progress)
+   - A personal fitness application Shaveen is currently building.
+   - A Next.js app that generates personalized workout and meal plans.
+   - Uses Clerk for authentication, Convex for a realtime backend, and the Gemini API to build plans
+     from a user's goals and constraints.
+   - His entry point into modern serverless patterns and LLM-driven product features.
+
+4. Portfolio Website + Grounded AI Assistant (this site)
+   - Built from scratch with Tailwind CSS and vanilla JavaScript.
+   - The chat assistant is backed by a Node/Express server calling the Gemini API, but it only answers
+     from a grounded knowledge base about Shaveen, with prompt guardrails so it stays accurate and
+     on topic.
+
+HOW HE WORKS
+- Learns by building: each project started from wanting to understand a specific part of the stack.
+- Uses AI coding tools (such as Claude Code) as assistants, and always reviews generated code before
+  integrating it — not as a substitute for understanding.
+
+CONTACT
+- Email: shaveenfernando2002@gmail.com
+- GitHub: github.com/shaveenfernando2002

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shaveen Fernando — Web Developer</title>
+<meta name="description" content="Shaveen Fernando — full-stack web developer and Computer Programming & Analysis student at Seneca Polytechnic, Toronto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bg: '#0c1116',
+          surface: '#141b22',
+          border: '#232d37',
+          text: '#e4e9ed',
+          dim: '#8b98a5',
+          faint: '#5a6672',
+          accent: '#e2a23b',
+          teal: '#57b9ab',
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['IBM Plex Sans', 'sans-serif'],
+          mono: ['IBM Plex Mono', 'monospace'],
+        },
+        maxWidth: { content: '1000px' },
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-bg text-text font-sans antialiased">
+
+<!-- ======== NAV ======== -->
+<header class="sticky top-0 z-40 bg-bg/90 backdrop-blur border-b border-border">
+  <nav class="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="font-serif text-lg font-semibold tracking-tight">Shaveen&nbsp;Fernando</a>
+    <ul class="hidden md:flex items-center gap-7 font-mono text-sm text-dim">
+      <li><a href="#about" data-nav class="hover:text-accent transition-colors"><span class="text-faint">01.</span> About</a></li>
+      <li><a href="#projects" data-nav class="hover:text-accent transition-colors"><span class="text-faint">02.</span> Projects</a></li>
+      <li><a href="#faq" data-nav class="hover:text-accent transition-colors"><span class="text-faint">03.</span> FAQ</a></li>
+      <li><a href="#contact" data-nav class="hover:text-accent transition-colors"><span class="text-faint">04.</span> Contact</a></li>
+    </ul>
+    <a href="https://github.com/shaveenfernando2002" target="_blank" rel="noopener" class="font-mono text-sm border border-border rounded px-3 py-1.5 hover:border-accent hover:text-accent transition-colors">GitHub ↗</a>
+  </nav>
+</header>
+
+<main id="top" class="max-w-content mx-auto px-6">
+
+  <!-- ======== HERO ======== -->
+  <section class="pt-24 pb-16 reveal">
+    <p class="font-mono text-accent text-sm mb-5">Hi, my name is</p>
+    <h1 class="font-serif text-5xl sm:text-6xl font-semibold leading-tight tracking-tight">Shaveen Fernando.</h1>
+    <h2 class="font-serif text-3xl sm:text-4xl text-dim font-medium leading-tight mt-2">I build things for the web.</h2>
+    <p class="mt-6 max-w-xl text-dim leading-relaxed">
+      I'm a Computer Programming &amp; Analysis student at Seneca Polytechnic in Toronto, focused on
+      full-stack JavaScript. I like turning real problems into working software — from a Stripe-backed
+      store to an AI assistant that actually stays on topic.
+    </p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#projects" class="font-mono text-sm bg-accent/10 text-accent border border-accent/40 rounded px-5 py-2.5 hover:bg-accent/20 transition-colors">See my work</a>
+      <a href="mailto:shaveenfernando2002@gmail.com" class="font-mono text-sm border border-border rounded px-5 py-2.5 hover:border-accent hover:text-accent transition-colors">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ======== STAT ROW ======== -->
+  <section class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border rounded-lg overflow-hidden mb-24 reveal">
+    <div class="bg-surface p-5 text-center">
+      <div class="font-serif text-3xl text-accent">5+</div>
+      <div class="font-mono text-xs text-faint mt-1">Full-stack projects</div>
+    </div>
+    <div class="bg-surface p-5 text-center">
+      <div class="font-serif text-3xl text-accent">2027</div>
+      <div class="font-mono text-xs text-faint mt-1">Grad year (Seneca)</div>
+    </div>
+    <div class="bg-surface p-5 text-center">
+      <div class="font-serif text-3xl text-accent">MERN</div>
+      <div class="font-mono text-xs text-faint mt-1">Core stack</div>
+    </div>
+    <div class="bg-surface p-5 text-center">
+      <div class="font-serif text-3xl text-accent">Co-op</div>
+      <div class="font-mono text-xs text-faint mt-1">Open — Winter 2027</div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section id="about" class="mb-24 scroll-mt-24 reveal">
+    <h2 class="font-serif text-2xl font-semibold mb-6 flex items-center gap-3">
+      <span class="font-mono text-accent text-base">01.</span> About me
+      <span class="h-px bg-border flex-1 ml-2"></span>
+    </h2>
+    <div class="grid md:grid-cols-5 gap-10">
+      <div class="md:col-span-3 space-y-4 text-dim leading-relaxed">
+        <p>
+          I'm in the Co-op stream of Seneca's Computer Programming &amp; Analysis diploma, on track to
+          graduate in 2027. Most of what I build sits in the JavaScript ecosystem — React and Vite on the
+          front end, Node and Express on the back, with PostgreSQL or MongoDB underneath.
+        </p>
+        <p>
+          I learn by shipping. Each project on this page started because I wanted to understand a piece of
+          the stack properly — authentication, payments, grounding an LLM so it doesn't hallucinate — and
+          the only way I know to learn that is to build it, break it, and fix it.
+        </p>
+        <p>Right now I'm building a <span class="text-text">personal fitness application</span>, and I'm looking for a <span class="text-text">Winter 2027 co-op</span> in web or full-stack development around the GTA.</p>
+      </div>
+      <div class="md:col-span-2">
+        <p class="font-mono text-sm text-faint mb-3">Technologies I work with:</p>
+        <ul class="grid grid-cols-2 gap-x-4 gap-y-2 font-mono text-sm text-dim">
+          <li class="flex gap-2"><span class="text-accent">▹</span>JavaScript</li>
+          <li class="flex gap-2"><span class="text-accent">▹</span>React / Vite</li>
+          <li class="flex gap-2"><span class="text-accent">▹</span>Node / Express</li>
+          <li class="flex gap-2"><span class="text-accent">▹</span>PostgreSQL</li>
+          <li class="flex gap-2"><span class="text-accent">▹</span>MongoDB</li>
+          <li class="flex gap-2"><span class="text-accent">▹</span>Java &amp; C++</li>
+          <li class="flex gap-2"><span class="text-accent">▹</span>SQL</li>
+          <li class="flex gap-2"><span class="text-accent">▹</span>Git / GitHub</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROJECTS ======== -->
+  <section id="projects" class="mb-24 scroll-mt-24 reveal">
+    <h2 class="font-serif text-2xl font-semibold mb-8 flex items-center gap-3">
+      <span class="font-mono text-accent text-base">02.</span> Things I've built
+      <span class="h-px bg-border flex-1 ml-2"></span>
+    </h2>
+
+    <div class="space-y-5">
+
+      <!-- E-commerce -->
+      <article class="bg-surface border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-xl font-semibold">Full-Stack E-Commerce Platform</h3>
+          <a href="https://github.com/shaveenfernando2002/ecommerce" target="_blank" rel="noopener" class="font-mono text-xs text-faint hover:text-accent whitespace-nowrap">Code ↗</a>
+        </div>
+        <p class="text-dim mt-3 leading-relaxed">
+          A MERN online store with JWT access/refresh auth, a Stripe checkout flow, and a coupon-discount
+          system. I configured MongoDB Atlas, Redis, Cloudinary and Stripe with my own credentials and
+          environment-based secrets, and debugged real integration failures — an SRV DNS error and a Redis
+          read/write permissions issue — on the way to getting it running.
+        </p>
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-teal mt-4">
+          <li>MongoDB</li><li>Express</li><li>React</li><li>Node</li><li>Stripe</li><li>Redis</li>
+        </ul>
+      </article>
+
+      <!-- Finance tracker -->
+      <article class="bg-surface border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-xl font-semibold">Personal Finance Tracker</h3>
+          <a href="https://github.com/shaveenfernando2002" target="_blank" rel="noopener" class="font-mono text-xs text-faint hover:text-accent whitespace-nowrap">Code ↗</a>
+        </div>
+        <p class="text-dim mt-3 leading-relaxed">
+          A full-stack app for tracking income and spending, with JWT authentication protecting each user's
+          data. Built with a React/Vite front end talking to a Node/Express API over a PostgreSQL database —
+          my project for getting relational data modelling and secure auth right end to end.
+        </p>
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-teal mt-4">
+          <li>React / Vite</li><li>Node / Express</li><li>PostgreSQL</li><li>JWT</li>
+        </ul>
+      </article>
+
+      <!-- AI Fitness -->
+      <article class="bg-surface border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-xl font-semibold flex items-center gap-3">
+            AI Fitness Assistant
+            <span class="font-mono text-[10px] uppercase tracking-wider text-teal border border-teal/40 rounded-full px-2 py-0.5">In progress</span>
+          </h3>
+          <a href="https://github.com/shaveenfernando2002" target="_blank" rel="noopener" class="font-mono text-xs text-faint hover:text-accent whitespace-nowrap">Code ↗</a>
+        </div>
+        <p class="text-dim mt-3 leading-relaxed">
+          A personal fitness application I'm currently building — a Next.js app that generates personalized
+          workout and meal plans. It uses Clerk for auth, Convex for the realtime backend, and the Gemini API
+          to build plans from a user's goals and constraints — my way into modern serverless patterns and
+          LLM-driven features.
+        </p>
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-teal mt-4">
+          <li>Next.js</li><li>Clerk</li><li>Convex</li><li>Gemini API</li>
+        </ul>
+      </article>
+
+      <!-- Portfolio chatbot -->
+      <article class="bg-surface border border-border rounded-lg p-6 hover:border-accent/50 transition-colors">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-xl font-semibold">This Site + Grounded AI Assistant</h3>
+          <span class="font-mono text-xs text-faint whitespace-nowrap">You're on it →</span>
+        </div>
+        <p class="text-dim mt-3 leading-relaxed">
+          The portfolio you're reading, built from scratch with Tailwind and vanilla JavaScript. The chat
+          button opens an assistant backed by a Node/Express server that calls the Gemini API — but only
+          answers from a grounded knowledge base about me, with prompt guardrails so it stays accurate and
+          on topic instead of making things up.
+        </p>
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 font-mono text-xs text-teal mt-4">
+          <li>Tailwind CSS</li><li>Vanilla JS</li><li>Node / Express</li><li>Gemini API</li><li>Prompt engineering</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ======== FAQ ======== -->
+  <section id="faq" class="mb-24 scroll-mt-24 reveal">
+    <h2 class="font-serif text-2xl font-semibold mb-8 flex items-center gap-3">
+      <span class="font-mono text-accent text-base">03.</span> A few questions
+      <span class="h-px bg-border flex-1 ml-2"></span>
+    </h2>
+    <div class="space-y-3" id="faq-list">
+      <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+        <button class="faq-q w-full flex items-center justify-between gap-4 p-5 text-left font-medium">
+          <span>What kind of role are you looking for?</span>
+          <span class="faq-icon font-mono text-accent text-xl shrink-0">+</span>
+        </button>
+        <div class="faq-a"><p class="px-5 pb-5 text-dim leading-relaxed">A Winter 2027 co-op in web or full-stack development, ideally in the GTA. I'm most comfortable in the JavaScript stack but happy to pick up whatever a team uses.</p></div>
+      </div>
+      <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+        <button class="faq-q w-full flex items-center justify-between gap-4 p-5 text-left font-medium">
+          <span>Are these projects solo work?</span>
+          <span class="faq-icon font-mono text-accent text-xl shrink-0">+</span>
+        </button>
+        <div class="faq-a"><p class="px-5 pb-5 text-dim leading-relaxed">Yes — these are my own builds. For the e-commerce store I used a course's architecture as a reference, but I wrote and configured the implementation myself and debugged the integration issues as they came up. I'm happy to walk through any part of the code.</p></div>
+      </div>
+      <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+        <button class="faq-q w-full flex items-center justify-between gap-4 p-5 text-left font-medium">
+          <span>How do you use AI tools in your work?</span>
+          <span class="faq-icon font-mono text-accent text-xl shrink-0">+</span>
+        </button>
+        <div class="faq-a"><p class="px-5 pb-5 text-dim leading-relaxed">As an assistant, not a replacement for understanding. I use tools like Claude Code to move faster, but I read and review everything before it goes in — and the AI assistant on this page is a project in its own right, built to stay grounded in real information.</p></div>
+      </div>
+      <div class="faq-item bg-surface border border-border rounded-lg overflow-hidden">
+        <button class="faq-q w-full flex items-center justify-between gap-4 p-5 text-left font-medium">
+          <span>What are you learning right now?</span>
+          <span class="faq-icon font-mono text-accent text-xl shrink-0">+</span>
+        </button>
+        <div class="faq-a"><p class="px-5 pb-5 text-dim leading-relaxed">Deepening the back-end side — database design, auth patterns, and deploying things properly — plus how LLM features (RAG, function calling, prompt design) fit into real products.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section id="contact" class="mb-28 scroll-mt-24 text-center reveal">
+    <p class="font-mono text-accent text-sm mb-3">04. What's next</p>
+    <h2 class="font-serif text-4xl font-semibold mb-4">Get in touch</h2>
+    <p class="text-dim max-w-md mx-auto leading-relaxed mb-8">
+      I'm looking for a Winter 2027 co-op. If you think there's a fit — or just want to talk shop —
+      my inbox is open.
+    </p>
+    <a href="mailto:shaveenfernando2002@gmail.com" class="font-mono text-sm bg-accent/10 text-accent border border-accent/40 rounded px-6 py-3 hover:bg-accent/20 transition-colors">Say hello</a>
+    <div class="flex items-center justify-center gap-6 mt-8 font-mono text-sm text-faint">
+      <a href="https://github.com/shaveenfernando2002" target="_blank" rel="noopener" class="hover:text-accent">GitHub</a>
+      <a href="mailto:shaveenfernando2002@gmail.com" class="hover:text-accent">Email</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t border-border">
+  <div class="max-w-content mx-auto px-6 py-6 font-mono text-xs text-faint text-center">
+    Designed &amp; built by Shaveen Fernando · Toronto, ON
+  </div>
+</footer>
+
+<!-- ======== CHAT WIDGET ======== -->
+<button id="chat-toggle" aria-label="Open chat" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-accent text-bg shadow-lg flex items-center justify-center text-2xl hover:scale-105 transition-transform">💬</button>
+
+<div id="chat-panel" class="fixed bottom-24 right-6 z-50 w-[90vw] max-w-sm bg-surface border border-border rounded-xl shadow-2xl flex-col overflow-hidden" style="display:none; height:70vh; max-height:540px;">
+  <div class="flex items-center justify-between px-4 py-3 border-b border-border bg-bg">
+    <div>
+      <p class="font-serif font-semibold leading-none">Ask about Shaveen</p>
+      <p class="font-mono text-xs text-faint mt-1">Answers from a grounded profile</p>
+    </div>
+    <button id="chat-close" aria-label="Close chat" class="text-dim hover:text-text text-xl leading-none">×</button>
+  </div>
+  <div id="chat-messages" class="flex-1 overflow-y-auto px-4 py-4 space-y-3 text-sm"></div>
+  <div id="chat-suggestions" class="px-4 pb-2 flex flex-wrap gap-2">
+    <button data-q="What tech stack does Shaveen use?" class="font-mono text-xs border border-border rounded-full px-3 py-1 text-dim hover:border-accent hover:text-accent">Tech stack?</button>
+    <button data-q="Tell me about the e-commerce project." class="font-mono text-xs border border-border rounded-full px-3 py-1 text-dim hover:border-accent hover:text-accent">E-commerce project?</button>
+    <button data-q="What role is Shaveen looking for?" class="font-mono text-xs border border-border rounded-full px-3 py-1 text-dim hover:border-accent hover:text-accent">Looking for?</button>
+  </div>
+  <div class="px-4 py-3 border-t border-border flex gap-2">
+    <input id="chat-input" type="text" placeholder="Type a question…" class="flex-1 bg-bg border border-border rounded px-3 py-2 text-sm focus:outline-none focus:border-accent" autocomplete="off">
+    <button id="chat-send" class="bg-accent text-bg font-mono text-sm rounded px-4 hover:bg-accent/90">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
